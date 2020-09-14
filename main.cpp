@@ -92,7 +92,7 @@ int main()
 		magnitude = sqrt(pow(xPosTemp, 2) + pow(yPosTemp, 2) + pow(zPosTemp, 2));
 
 		yawAngle = (atan2(tempYaw, pitchAngle)) * 180 / PI;
-		pitchAngle = acos2(zPosTemp / magnitude);
+		pitchAngle = acos(zPosTemp / magnitude);
 
 		WriteProcessMemory(handle, (BYTE*)pitchAddress, &pitchAngle, sizeof(pitchAngle), 0);
 		WriteProcessMemory(handle, (BYTE*)yawAddress, &yawAngle, sizeof(pitchAngle), 0);
