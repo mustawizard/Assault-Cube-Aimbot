@@ -12,7 +12,7 @@
 
 int main()
 {
-	int health = 10000;
+	int health = 100;
 	char name[260];
 
 	float xPos = 0;
